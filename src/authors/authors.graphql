@@ -9,3 +9,7 @@ type Author {
 type Query {
   author(id: Int!): Author
 }
+
+type Mutation {
+  editPhoneNumber(id: Int!, phoneNumber: String!): Author
+}

@@ -40,4 +40,14 @@ export class AuthorsService {
     const result = this.authorsDatabase.filter(author => author.id === id);
     return result[0];
   }
+
+  editPhoneNumber(id: number, phoneNumber: string) {
+    this.authorsDatabase = this.authorsDatabase.map(author => {
+      if (author.id === id) {
+        author.phoneNumber = phoneNumber;
+      }
+      return author;
+    });
+    return this.findOneById(id);
+  }
 }

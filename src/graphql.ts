@@ -17,3 +17,7 @@ export class Author {
 export abstract class IQuery {
     abstract author(id: number): Author | Promise<Author>;
 }
+
+export abstract class IMutation {
+    abstract editPhoneNumber(id: number, phoneNumber: string): Author | Promise<Author>;
+}
